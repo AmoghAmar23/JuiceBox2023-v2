@@ -2,13 +2,7 @@
 const { Client } = require('pg'); // imports the pg module
 
 // supply the db name and location of the database
-const client = new Client({
-    host: '3.141.45.14',
-    port: 5432,
-    database: 'juicebox-dev',
-    user: 'postgres',
-    password: 'Albino778899',
-  })
+const client = new Client(process.env.DATABASE_URL)
 module.exports = {
   client,
 } 
